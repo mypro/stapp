@@ -1,4 +1,4 @@
-package com.stapp.util;
+package com.stackapp.util;
 
 import java.lang.reflect.Array;
 import java.lang.reflect.GenericArrayType;
