@@ -1,4 +1,5 @@
 target
+filters
 *.class
 
 .classpath
