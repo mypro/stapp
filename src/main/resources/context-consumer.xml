@@ -7,13 +7,9 @@
         http://code.alibabatech.com/schema/dubbo/dubbo.xsd
         ">
 
-	<dubbo:application name="consumer_xh-newsfeed" />
+	<!-- <dubbo:application name="consumer_xh-newsfeed" /> -->
 
-	<dubbo:registry id="test" protocol="zookeeper"
-		address="192.168.83.251:2181,192.168.83.252:2181,192.168.83.253:2181,192.168.83.254:2181" />
-	<dubbo:registry id="prd" protocol="zookeeper"
-		address="192.168.75.138:2181,192.168.75.139:2181,192.168.75.140:2181,192.168.75.141:2181,192.168.75.142:2181" />
 
 	<!-- 取新浪绑定用户标签接口 -->
-	<dubbo:reference id="commentService" interface="com.xinhuanet.share.dubbo.CommentService" registry="test" />
+	<!-- <dubbo:reference id="commentService" interface="com.xinhuanet.share.dubbo.CommentService" registry="test" /> -->
 </beans>
