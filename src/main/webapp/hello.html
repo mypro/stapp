@@ -3,7 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script src="epicEditor/js/epiceditor.min.js"></script>
 <script type="text/javascript">
+var editor = new EpicEditor().load();
+</script>
+<script type="text/javascript">
+
 function showJSON() {   
     var user =    
     {    
@@ -30,5 +35,7 @@ function showJSON() {
 </head>
 <body>
 <h1>hello my nginx</h1>
+
+<div id="epiceditor"></div>
 </body>
 </html>

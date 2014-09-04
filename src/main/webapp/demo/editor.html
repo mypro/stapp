@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- <link rel="stylesheet" href="../epiceditor/themes/base/epiceditor.css">
+<link rel="stylesheet" href="../epiceditor/themes/editor/epic-dark.css">
+<link rel="stylesheet" href="../epiceditor/themes/editor/epic-light.css">
+<link rel="stylesheet" href="../epiceditor/themes/preview/bartik.css">
+<link rel="stylesheet" href="../epiceditor/themes/preview/github.css">
+<link rel="stylesheet" href="../epiceditor/themes/preview/preview-dark.css"> -->
+<script src="../epiceditor/js/epiceditor.min.js"></script>
+<script src="../dist/js/jquery.min.js"></script>
+<script type="text/javascript">
+</script>
+</head>
+<body>
+<h1>hello my epic editor</h1>
+<input type="button" value="show" onclick="showit()">
+<input type="button" value="hide" onclick="hideit()">
+<input id ="openfile" type="button" value="openfile" onclick="openfile();">
+<div id="epiceditor" style="width:700px;height:300px"></div>
+<pre><code class="lang-bash">$ git clone git@github.com:OscarGodson/EpicEditor</code></pre>
+<script type="text/javascript">
+function showit(){
+	editor.load(function () {
+		  console.log("Editor loaded.")
+		});
+	console.log(editor.getElement('editor').body.innerHTML); 
+}
+function hideit(){
+	editor.unload(function () {
+		  console.log("Editor unloaded.")
+		});
+}
+function openfile(){
+	 editor.importFile('some-file',"#Imported markdown\nFancy, huh?")// Opens a file when the user clicks this button
+}
+var opts = {
+		  container: 'epiceditor',
+		  textarea: null,
+		  basePath: '../epiceditor',
+		  clientSideStorage: true,
+		  localStorageName: 'epiceditor',
+		  useNativeFullscreen: true,
+		  parser: marked,
+		  file: {
+		    name: 'epiceditor',
+		    defaultContent: '',
+		    autoSave: 100
+		  },
+		  theme: {
+		    base: '/themes/base/epiceditor.css',
+		    preview: '/themes/preview/preview-dark.css',
+		    editor: '/themes/editor/epic-dark.css'
+		  },
+		  button: {
+		    preview: true,
+		    fullscreen: true,
+		    bar: "auto"
+		  },
+		  focusOnLoad: false,
+		  shortcut: {
+		    modifier: 18,
+		    fullscreen: 70,
+		    preview: 80
+		  },
+		  string: {
+		    togglePreview: 'Toggle Preview Mode',
+		    toggleEdit: 'Toggle Edit Mode',
+		    toggleFullscreen: 'Enter Fullscreen'
+		  },
+		  autogrow: false
+		}
+		var editor = new EpicEditor(opts);
+		console.log("here");
+		
+		
+		
+</script>
+</body>
+</html>
