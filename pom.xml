@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.stackapp</groupId>
-  <artifactId>stapp</artifactId>
-  <packaging>war</packaging>
-  <version>1.0.1</version>
-  <name>stapp Maven Webapp</name>
-  <url>http://maven.apache.org</url>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.stackapp</groupId>
+	<artifactId>stapp</artifactId>
+	<packaging>war</packaging>
+	<version>1.0.1</version>
+	<name>stapp Maven Webapp</name>
+	<url>http://maven.apache.org</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -55,7 +55,7 @@
 			<version>1.1.41</version>
 			<scope>compile</scope>
 		</dependency>
-		
+
 		<!-- jedis -->
 		<dependency>
 			<groupId>redis.clients</groupId>
@@ -63,8 +63,12 @@
 			<version>2.5.1</version>
 			<scope>compile</scope>
 		</dependency>
-		
-
+		<!-- freemarker -->
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>2.3.20</version>
+		</dependency>
 		<!-- tcm -->
 		<dependency>
 			<groupId>com.trs.tcm_server</groupId>
@@ -150,17 +154,8 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
 				<version>2.4</version>
-				<!--
-				<configuration>
-					<includes>
-						<include>com/xinhuanet/newsfeed/dubbo/service/*</include>
-						<include>com/xinhuanet/newsfeed/dubbo/model/*</include>
-					</includes>
-					<excludes>
-						<exclude>com/xinhuanet/newsfeed/dubbo/service/impl</exclude>
-					</excludes>
-				</configuration>
-				-->
+				<!-- <configuration> <includes> <include>com/xinhuanet/newsfeed/dubbo/service/*</include> <include>com/xinhuanet/newsfeed/dubbo/model/*</include> 
+					</includes> <excludes> <exclude>com/xinhuanet/newsfeed/dubbo/service/impl</exclude> </excludes> </configuration> -->
 				<executions>
 					<execution>
 						<id>make-a-jar</id>
@@ -176,15 +171,8 @@
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>2.9.1</version>
 				<configuration>
-				<!--
-					<sourceFileIncludes>
-						<includes>com/xinhuanet/newsfeed/dubbo/**</includes>
-						<includes>com/xinhuanet/newsfeed/model/**</includes>
-					</sourceFileIncludes>
-					<sourceFileExcludes>
-						<exclude>com/xinhuanet/newsfeed/dubbo/service/impl/**</exclude>
-					</sourceFileExcludes>
-					-->
+					<!-- <sourceFileIncludes> <includes>com/xinhuanet/newsfeed/dubbo/**</includes> <includes>com/xinhuanet/newsfeed/model/**</includes> 
+						</sourceFileIncludes> <sourceFileExcludes> <exclude>com/xinhuanet/newsfeed/dubbo/service/impl/**</exclude> </sourceFileExcludes> -->
 				</configuration>
 			</plugin>
 
